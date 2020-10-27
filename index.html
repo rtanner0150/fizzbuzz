@@ -8,9 +8,9 @@
     </head>
     <body>
         <h1>FizzBuzz</h1>
-        <p>Enter a number to play!</p>
+        <p>Enter a number between 1 and 1000 to play!</p>
         <div id="input-wrapper">
-            <input type="text" id="input-number">
+            <input type="number" id="input-number" min="1" max="1000">
             <input type="submit" id="input-submit">
         </div>
         <div id="results-wrapper">
@@ -24,6 +24,11 @@
                 var number = document.getElementById('input-number').value;
                 //get results wrapper object
                 var resultsWrapper = document.getElementById('results-wrapper');
+                //make sure number <= 1000
+                if (number > 1000){
+                    resultsWrapper.innerHTML = '<span class="fizz buzz">Number cannot be greater than 1000.</span>';
+                    return;
+                }
                 //reset results to empty string in case of multiple plays
                 resultsWrapper.innerHTML = '';
                 //increment from 1 to chosen number one at a time
