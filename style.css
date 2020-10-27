@@ -1,0 +1,10 @@
+*, * > *{box-sizing:border-box;}
+body{background:#333; color:#eee; padding-top:50px; text-align:center; font-family:'Open Sans Condensed', Arial, Helvetica, sans-serif; font-size:20px;}
+h1{font-family:'Raleway', Arial, helvetica, sans-serif; font-weight:700;}
+a{color:white; background:black; padding:15px 30px; font-size:24px; text-decoration:none; margin:0 10px;}
+a:hover{background:white; color:black;}
+#results-wrapper{max-width:700px; margin:0 auto; word-wrap:break-word;}
+span{display:inline-block; padding:5px;}
+.fizz{font-size:22px; color:yellow;}
+.buzz{font-size:24px; color:orange;}
+.fizz.buzz{font-size:28px; color:red; text-transform:uppercase;}

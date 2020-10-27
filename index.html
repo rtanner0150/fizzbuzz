@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FizzBuzz</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>FizzBuzz</h1>
+        <p>Enter a number to play!</p>
+        <div id="input-wrapper">
+            <input type="text" id="input-number">
+            <input type="submit" id="input-submit">
+        </div>
+        <div id="results-wrapper">
+
+        </div>
+
+        <script>
+            //add click handler to submit button
+            document.getElementById('input-submit').addEventListener('click',function(){
+                //get value from number input field
+                var number = document.getElementById('input-number').value;
+                //get results wrapper object
+                var resultsWrapper = document.getElementById('results-wrapper');
+                //reset results to empty string in case of multiple plays
+                resultsWrapper.innerHTML = '';
+                //increment from 1 to chosen number one at a time
+                for (var i = 1; i <= number; i++){
+                    if (i % 3 == 0 && i % 5 == 0){
+                        //if divisible by 3 AND 5
+                        resultsWrapper.innerHTML += '<span class="fizz buzz">FizzBuzz</span>';
+                    } else if (i % 5 == 0){
+                        //if divisible by 5
+                        resultsWrapper.innerHTML += '<span class="buzz">Buzz</span>';
+                    } else if (i % 3 == 0){
+                        //if divisible by 3
+                        resultsWrapper.innerHTML += '<span class="fizz">Fizz</span>';
+                    } else {
+                        //if not divisible by 3 or 5
+                        resultsWrapper.innerHTML += ('<span>' + i + '</span>');
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
