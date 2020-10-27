@@ -8,3 +8,4 @@ span{display:inline-block; padding:5px;}
 .fizz{font-size:22px; color:yellow;}
 .buzz{font-size:24px; color:orange;}
 .fizz.buzz{font-size:28px; color:red; text-transform:uppercase;}
+#input-number{width:100px;}
